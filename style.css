@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #2e4a66; /* Ko'k */
+  --secondary-color: #16324f; /* To'q ko'k */
+  --accent-color: #477a91; /* Moviy */
+  --background-color: #68a6b3; /* Ochiq moviy */
+  --wrapper-background: #ffffff; /* Wrapper oq fon */
+  --text-color: #f0f0f0; /* Matn uchun och kulrang */
+  --border-color: #d1d1d1; /* Chegara uchun neytral rang */
+  --shadow-color: rgba(0, 0, 0, 0.2); /* Soyali effekt uchun rang */
+}
+
+body {
+  background-color: var(--background-color); /* Ochiq moviy fon */
+  color: var(--text-color);
+}
+
+.container {
+  width: 100%;
+}
+
+.allCategories {
+  max-width: 100%;
+  width: 70%;
+  display: flex;
+  margin: 20px auto;
+  justify-content: space-between;
+  gap: 5px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  position: sticky;
+  z-index: 1;
+}
+
+.allCategories::-webkit-scrollbar {
+  display: none;
+}
+
+.allCategories button {
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 20px 5px;
+  cursor: pointer;
+  flex-shrink: 0;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.allCategories button:hover {
+  background-color: var(--secondary-color);
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 30px 20px; /* Ichki bo'shliq qo'shildi */
+  background-color: #34699a; /* Wrapper oq fon */
+  border-radius: 10px; /* Yengil yumaloq burchaklar */
+  box-shadow: 0 4px 10px var(--shadow-color); /* Sof soyali dizayn */
+}
+
+.wrapper img {
+  background: #b9c0d5;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+}
+
+.lds-spinner,
+.lds-spinner div,
+.lds-spinner div:after {
+  box-sizing: border-box;
+}
+
+.lds-spinner {
+  color: var(--secondary-color);
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-spinner div:after {
+  background: var(--secondary-color);
+}
+
+.card {
+  width: 300px;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  background-color: var(--wrapper-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+
+.card h3 {
+  color: var(--primary-color);
+  font-size: 18px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.card strong {
+  color: var(--accent-color);
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.card button {
+  font-size: 16px;
+  padding: 8px 16px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: var(--primary-color);
+}
+
+.btn {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+}
